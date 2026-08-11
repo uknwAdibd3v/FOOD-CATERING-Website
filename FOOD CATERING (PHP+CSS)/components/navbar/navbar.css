@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Navbar / Header Styles
+   navbar.css — Warisan Norman Trading
+   ========================================================================== */
+
+/* Default Header Design */
+header {
+    background-color: rgb(118, 64, 43);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    position: relative;
+    align-items: center;
+}
+
+/* Logo Design */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Section of Header */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Design */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Button Design */
+/* Button Design */
+.btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1.5px solid #c8a96e;
+    color: #c8a96e;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #c8a96e;
+    color: #4b2e1e;
+    border: 1.5px solid #c8a96e;
+}
+
+/* ==========================================================================
+   Hamburger Icon
+   ========================================================================== */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Responsive — Mobile Menu (triggers at 1056px)
+   ========================================================================== */
+
+/* Responsive — Mobile Menu (triggers at 1056px) - */
+
+@media screen and (max-width: 1056px) {
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Fixed absolute container rules */
+    .right-section {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(118, 64, 43);
+        padding: 30px 0;
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+        z-index: 9999;
+        
+        /* Forces the dropdown to cleanly isolate away from hero elements underneath */
+        max-height: calc(100vh - 100%);
+        overflow-y: auto;
+    }
+
+    .right-section.active {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center-aligns link text cleanly */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        margin: 14px 0;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav a:hover {
+        border-bottom: none;
+        color: #c8a96e;
+    }
+
+    /* Isolates any text links/buttons from cramming directly beneath nav links */
+    .right-section > a {
+        width: 80%;
+        max-width: 280px; 
+        margin: 10px auto 0 auto;
+        display: block;
+    }
+
+    .btn {
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   Hamburger Open Animation — morphs 3 lines into X
+   ========================================================================== */
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Prevent overlay from blocking navbar dropdown clicks */
+.homeBg::after {
+    pointer-events: none;
+}

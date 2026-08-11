@@ -1,0 +1,222 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    /* FIX: Force body structure to handle overflowing table components smoothly */
+    display: grid;
+    min-width: max-content;
+}
+
+/* Default Header Design */
+header {
+    background-color: rgb(118, 64, 43);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    
+    /* FIX: Locks the brown bar to expand automatically to match the widest element below */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Design */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Section of Header */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section p {
+    color: rgb(80, 45, 1);
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Design */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Default Button Design */
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid;
+    color: #c8a96e;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    border: none;
+}
+
+/* Admin Main Layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f4ec;
+    
+    /* FIX: Keeps beige background matched 1:1 with horizontal content widths */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Admin Sidebar - LEFT LAYOUT UNTOUCHED */
+.admin-sidebar {
+    width: 150px;
+    background-color: #2b2500;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    
+    /* FIX: Prevents the left side nav from shrinking or moving shape */
+    flex-shrink: 0;
+}
+
+.admin-sidebar h3 {
+    font-size: 14px;
+}
+
+.admin-sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: linear-gradient(to right, #6b4a25, #c8a27a, #6b4a25);
+}
+
+/* Admin Content */
+.admin-content {
+    flex: 1;
+    padding: 15px 25px;
+    
+    /* FIX: Helps contain internal table dimensions inside content panels */
+    box-sizing: border-box;
+}
+
+.admin-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.dash-card {
+    background: white;
+    width: 180px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #c8a27a;
+    box-shadow: 7px 7px 10px rgba(0,0,0,0.25);
+    flex-shrink: 0;
+}
+
+.dash-card h2 {
+    margin: 5px;
+    color: #4b2e1e;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dash-card p {
+    color: black;
+    margin: 0;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Admin Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.admin-table th {
+    background-color: #2b2500;
+    color: #d6a84f;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 2px solid black;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+/* Status / Payment Tags */
+.tag {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.qr {
+    background-color: #6424dd;
+}
+
+.card-pay {
+    background-color: #5877ff;
+}
+
+.pending {
+    background-color: #ff8a3d;
+}
+
+.confirmed {
+    background-color: #00b85c;
+}
+
+.cancelled {
+    background-color: #c0392b;
+}

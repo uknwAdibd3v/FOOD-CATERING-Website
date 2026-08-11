@@ -1,0 +1,94 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Home Page Background */
+.homeBg {
+    position: relative;
+    background-image: url('bgImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.homeBg::after {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+    
+    /* FIX: This allows clicks to pass straight through the dark layer to your links! */
+    pointer-events: none; 
+}
+
+/* Keep content layered cleanly above background overlay */
+header {
+    position: relative;
+    z-index: 10000; /* Give the header the ultimate priority so it's always clickable */
+}
+
+.homeText {
+    position: relative;
+    z-index: 2;
+}
+
+
+.homeText {
+    min-height: 85vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: black 1px 2px 4px;
+}
+
+.homeText h1 {
+    color: rgb(240, 240, 240);
+    font-size: 35px;
+    margin: 0;
+}
+
+.homeText h2 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.homeText h3 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* Book Now Button Section */
+.bookNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 1056px) {
+    .homeText {
+       
+        justify-content: flex-start;
+        padding-top: 360px; 
+    }
+}

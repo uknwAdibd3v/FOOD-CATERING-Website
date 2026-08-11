@@ -1,0 +1,221 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Default Header Design */
+header {
+    background-color: rgb(118, 64, 43);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+/* Logo Design */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Section of Header */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section p {
+    color: rgb(80, 45, 1);
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Design */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Default Button Design */
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid;
+    color: #c8a96e;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    border: none;
+}
+
+/* Admin Main Layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f4ec;
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    width: 150px;
+    background-color: #2b2500;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.admin-sidebar h3 {
+    font-size: 14px;
+}
+
+.admin-sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: linear-gradient(to right, #6b4a25, #c8a27a, #6b4a25);
+}
+
+/* Admin Content */
+.admin-content {
+    flex: 1;
+    padding: 15px 25px;
+}
+
+.admin-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* General Form Card */
+.form-card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Payment Card */
+.payment-card {
+    width: 85%;
+    margin: 20px auto;
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #c8a27a;
+}
+
+.payment-card h2 {
+    text-align: left;
+    color: #9a6f3c;
+    margin: 0;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.payment-card p {
+    text-align: left;
+    color: #9a6f3c;
+    margin: 3px 0 0;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Right Side Payment Section */
+.payment-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.payment-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Status Tags */
+.tag {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.pending {
+    background-color: #ff8a3d;
+}
+
+.confirmed {
+    background-color: #00b85c;
+}
+
+.cancelled {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* Payment Action Buttons */
+.approve-btn {
+    width: 110px;
+    background: #00b85c;
+    color: white;
+    border: none;
+}
+
+.cancel-btn {
+    width: 110px;
+    background: #c0392b;
+    color: white;
+    border: none;
+}
+
+.approve-btn:hover {
+    background: #19d16f;
+    color: white;
+    border: none;
+}
+
+.cancel-btn:hover {
+    background: #e74c3c;
+    color: white;
+    border: none;
+}

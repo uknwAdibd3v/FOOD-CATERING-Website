@@ -1,0 +1,242 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    /* FIX: Prevents background clipping by stretching the root canvas to match overflowing contents */
+    display: grid;
+    min-width: max-content;
+}
+
+/* Default Header Design */
+header {
+    background-color: rgb(118, 64, 43);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    
+    /* FIX: Forces the brown header bar to stay full width alongside your content grid */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Design */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Section of Header */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section p {
+    color: rgb(80, 45, 1);
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Design */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Default Button Design */
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid;
+    color: #c8a96e;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    border: none;
+}
+
+/* Admin Main Layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f4ec;
+    
+    /* FIX: Synchronizes the beige backdrop wrapper dimensions with your table limits */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Admin Sidebar - LEFT SIDEBAR UNTOUCHED */
+.admin-sidebar {
+    width: 150px;
+    background-color: #2b2500;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    
+    /* FIX: Guarantees your sidebar dimensions remain fixed and un-squeezed */
+    flex-shrink: 0;
+}
+
+.admin-sidebar h3 {
+    font-size: 14px;
+}
+
+.admin-sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: linear-gradient(to right, #6b4a25, #c8a27a, #6b4a25);
+}
+
+/* Admin Content */
+.admin-content {
+    flex: 1;
+    padding: 15px 25px;
+    box-sizing: border-box;
+}
+
+.admin-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* General Form Card */
+.form-card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Report Summary Cards */
+.report-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 18px;
+}
+
+.report-card {
+    width: 180px;
+    min-height: 75px;
+    padding: 15px;
+    border: 1px solid #c8a27a;
+    flex-shrink: 0; /* Prevents summary cards from squishing under narrow viewports */
+}
+
+.report-card p,
+.report-card h2,
+.report-card h3 {
+    text-align: left;
+    margin: 0;
+}
+
+.report-card p {
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.report-card h2 {
+    color: black;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.report-card h3 {
+    color: #b58b6d;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Report Breakdown Section */
+.report-breakdown {
+    padding: 25px;
+    border: 1px solid #c8a27a;
+}
+
+.report-breakdown h2 {
+    text-align: center;
+    color: black;
+    margin-top: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Report Rows */
+.report-row {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 1fr 0.8fr;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    column-gap: 20px;
+}
+
+.report-row span {
+    text-align: left;
+}
+
+/* Status Tags */
+.tag {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.report-row .tag {
+    justify-self: start;
+}
+
+.pending {
+    background-color: #ff8a3d;
+}
+
+.confirmed {
+    background-color: #00b85c;
+}
+
+.cancelled {
+    background-color: #c0392b;
+}

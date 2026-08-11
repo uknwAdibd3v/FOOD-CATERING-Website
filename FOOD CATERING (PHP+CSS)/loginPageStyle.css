@@ -1,0 +1,128 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Login Page Background */
+.form-page {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-top: 40px;
+}
+
+/* Top Section for Login Page */
+.top-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-section img {
+    width: 150px;
+    height: 150px;
+}
+
+.top-section h2 {
+    color: rgba(255, 255, 255, 0.845);
+    margin-top: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+/* Login Form Card */
+.form-card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Form Title */
+.form-card h2 {
+    font-family: "Times New Roman", serif;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #4b2e1e;
+}
+
+/* Role Button Section */
+.role-select {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.role-btn {
+    padding: 8px 22px;
+    border: 1px solid #c8a27a;
+    border-radius: 8px;
+    background: transparent;
+    color: #c8a27a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Selected Role Button */
+.role-btn.active {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    border: none;
+}
+
+/* Form Labels */
+.form-card label {
+    font-size: 12px;
+    color: #8a6b4f;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Form Inputs */
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c8a27a;
+    margin-top: 5px;
+    outline: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Login Button */
+.submit {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+.submit:hover {
+    opacity: 0.9;
+}
+
+/* Sign Up Link Text */
+.switch {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    color: rgb(80, 45, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.switch a {
+    color: #c8a27a;
+    text-decoration: none;
+}

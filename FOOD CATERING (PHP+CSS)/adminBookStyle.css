@@ -1,0 +1,196 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    /* FIX: Force body to dynamically match the width of overflowing children elements */
+    display: grid;
+    min-width: max-content;
+}
+
+/* Default Header Design */
+header {
+    background-color: rgb(118, 64, 43);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    
+    /* FIX: Ensures the brown background covers full width when the screen is minimized */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Design */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Section of Header */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section p {
+    color: rgb(80, 45, 1);
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Design */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Default Button Design */
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid;
+    color: #c8a96e;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    border: none;
+}
+
+/* Admin Main Layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f4ec;
+    
+    /* FIX: Allows the beige canvas area to stretch seamlessly alongside the header elements */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Admin Sidebar - LEFT SIDEBAR UNTOUCHED */
+.admin-sidebar {
+    width: 150px;
+    background-color: #2b2500;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    
+    /* FIX: Holds the left menu rigid so it never gets squeezed out of alignment */
+    flex-shrink: 0;
+}
+
+.admin-sidebar h3 {
+    font-size: 14px;
+}
+
+.admin-sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: linear-gradient(to right, #6b4a25, #c8a27a, #6b4a25);
+}
+
+/* Admin Content */
+.admin-content {
+    flex: 1;
+    padding: 15px 25px;
+    box-sizing: border-box;
+}
+
+.admin-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* Admin Booking Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.admin-table th {
+    background-color: #2b2500;
+    color: #d6a84f;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 2px solid black;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+/* Payment / Status Tags */
+.tag {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.qr {
+    background-color: #6424dd;
+}
+
+.card-pay {
+    background-color: #5877ff;
+}
+
+.bank {
+    background-color: #4a7c59;
+}
+
+.paypal {
+    background-color: #0070ba;
+}
+
+.pending {
+    background-color: #ff8a3d;
+}
+
+.confirmed {
+    background-color: #00b85c;
+}
+
+.cancelled {
+    background-color: #c0392b;
+}

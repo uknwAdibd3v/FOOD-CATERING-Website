@@ -1,0 +1,113 @@
+/* Default Body Font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Default Header Design */
+header {
+    background-color: rgb(118, 64, 43);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+/* Logo Design */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Right Section of Header */
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Design */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Default Button Design */
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid;
+    color: #c8a96e;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    color: white;
+    border: none;
+}
+
+/* Front Page Section Design */
+.frontText {
+    height: 90vh;
+    background: linear-gradient(to bottom, #c8a27a, #4b2e1e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.frontText h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 64px;
+    color: #f5eee6;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.frontText p {
+    font-size: 18px;
+    color: #f5eee6;
+    letter-spacing: 2px;
+}
+
+/* Decoration Front Page */
+.shapes {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.shapes span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    transform: rotate(45deg);
+    margin: 10px;
+}
+
